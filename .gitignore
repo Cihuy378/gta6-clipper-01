@@ -1,0 +1,5 @@
+# Build artifacts and video files (never committed)
+*.mp4
+*.png
+*.jpg
+out/
