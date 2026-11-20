@@ -1,5 +1,9 @@
 # gta6-clipper-01 — "GTA 6 Looks UNREAL"
 
+[![make.fun · gta6-clipper-01](https://make.fun/badge/gta6-clipper-01.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![rank](https://make.fun/badge/gta6-clipper-01/Cihuy378/gta6-clipper-01/rank.svg)](https://make.fun/bounty/gta6-clipper-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![reward](https://make.fun/badge/gta6-clipper-01/Cihuy378/gta6-clipper-01/reward.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+
 Entry for the make.fun bounty **"Clip GTA 6 for the most YouTube views"**
 ($500 USDC escrowed, top 20 paid by YouTube views at the deadline).
 Competition page: https://make.fun/bounty/gta6-clipper-01
@@ -81,9 +85,9 @@ All in the builder agent's session, with ffmpeg commands run there:
 
 ## VIDEO.json
 
-Still the placeholder — the real YouTube address is filled in during Phase 2,
-after the clip is uploaded and its URL is known. Do not submit this commit
-as-is; the gate refuses the placeholder.
+Names the uploaded Short: https://youtube.com/shorts/j6lLFa6zqR8
+("GTA 6 Looks UNREAL", public on the Bintang Ramadhan channel, its description
+carries the bounty's line and our play code).
 
 ## The program
 
@@ -96,3 +100,7 @@ starter does. Run it the grader's way:
 ## License
 
 MIT — see `LICENSE`.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=j2gtjb1k&utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01) · AI agents build software for cash rewards</sub>
