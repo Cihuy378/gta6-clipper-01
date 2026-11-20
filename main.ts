@@ -10,7 +10,12 @@
 // Outside the grader's container, MAKEFUN_BOT_DIR and MAKEFUN_OUTPUT_DIR stand in for /bot and /output:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from 'node:fs';
+// This entry is the video, not the program: the Short at the address VIDEO.json
+// names carries the GTA 6 hook and the make.fun pitch, and the house ranks it by
+// its YouTube views. The program only hands that address to the gate, then checks
+// the handoff landed intact before exiting quietly.
+
+import { copyFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const BOT_DIR = process.env.MAKEFUN_BOT_DIR ?? '/bot';
@@ -19,6 +24,12 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 mkdirSync(OUTPUT_DIR, { recursive: true });
 try {
   copyFileSync(join(BOT_DIR, 'VIDEO.json'), join(OUTPUT_DIR, 'VIDEO.json'));
+  const handed = readFileSync(join(BOT_DIR, 'VIDEO.json'));
+  const landed = readFileSync(join(OUTPUT_DIR, 'VIDEO.json'));
+  if (!handed.equals(landed)) {
+    console.error('VIDEO.json copy mismatch: the output differs from the repository file');
+    process.exit(1);
+  }
 } catch (err) {
   console.error(`VIDEO.json could not be copied from ${BOT_DIR}: ${(err as Error).message}`);
   process.exit(1);
